@@ -3,14 +3,14 @@ class mongo-server
     include mongo-server::config, repo_10gen
 
 	package {
-        "mongo20-10gen":
+        "mongo-10gen":
             alias => "mongo-10gen",
             ensure => 'installed',
             provider => 'yum',
             require => [
                 Yumrepo['10gen']
             ];
-        "mongo20-10gen-server":
+        "mongo-10gen-server":
             alias => "mongo-10gen-server",
             ensure => 'installed',
             provider => 'yum',
